@@ -32,7 +32,7 @@ app.get('/api/foodData', async (req, res) => {
       food_category: food_category,
     };
 
-    res.send(data);
+    res.json(data);
   } catch (err) {
     console.error(err.message);
     res.send('Server Error');
