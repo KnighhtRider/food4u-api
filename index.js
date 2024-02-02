@@ -1,6 +1,17 @@
 const express = require("express");
 const app = express();
 const PORT = process.env.PORT || 5000;
+const cors = require('cors');
+
+
+app.use(cors({
+  origin: ["https://food4u-phi.vercel.app"],
+  methods: ["POST", "GET"],
+  credentials: true
+}))
+
+
+
 
 const mongoose = require("mongoose");
 const mongoURL =
